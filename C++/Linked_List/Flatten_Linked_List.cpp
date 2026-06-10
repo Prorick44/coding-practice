@@ -1,6 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+struct Node
+{
+  int data;
+  Node *next;
+  Node *bottom;
+};
+
 Node *merge(Node *a, Node *b)
 {
   if (!a)
@@ -24,7 +31,7 @@ Node *merge(Node *a, Node *b)
   return result;
 }
 
-Node *faltten(Node *root)
+Node *flatten(Node *root)
 {
   if (!root || !root->next)
     return root;

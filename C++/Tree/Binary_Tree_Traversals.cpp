@@ -1,6 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// Definition for a binary tree node.
+struct TreeNode
+{
+  int val;
+  TreeNode *left;
+  TreeNode *right;
+  TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+};
+
 // Inorder
 vector<int> inorderTraversal(TreeNode *root)
 {
@@ -57,7 +66,7 @@ vector<int> postorderTraversal(TreeNode *root)
   if (!root)
     return ans;
 
-  stack<TreeNdode *> st1, st2;
+  stack<TreeNode *> st1, st2;
   st1.push(root);
   while (!st1.empty())
   {

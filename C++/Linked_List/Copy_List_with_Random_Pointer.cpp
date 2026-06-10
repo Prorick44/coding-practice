@@ -1,6 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+class Node
+{
+public:
+  int val;
+  Node *next;
+  Node *random;
+  Node(int _val) : val(_val), next(nullptr), random(nullptr) {}
+};
+
 class Solution
 {
 public:
